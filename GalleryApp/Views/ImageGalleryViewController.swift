@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ImageGalleryViewController: UIViewController, UICollectionViewDataSource {
+class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -17,6 +17,7 @@ class ImageGalleryViewController: UIViewController, UICollectionViewDataSource {
         super.viewDidLoad()
         collectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: "MyCollectionViewCell")
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
