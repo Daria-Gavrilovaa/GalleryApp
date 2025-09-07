@@ -9,12 +9,13 @@ import UIKit
 
 class MyCollectionViewCell: UICollectionViewCell {
 
-    
     @IBOutlet weak var imageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
+    static func nib() -> UINib {
+        return UINib(nibName: "MyCollectionViewCell", bundle: nil)
+    }
 }
