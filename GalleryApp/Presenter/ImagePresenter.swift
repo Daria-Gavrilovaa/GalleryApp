@@ -11,3 +11,11 @@ protocol ImagePresenterDelegate: AnyObject {
     func presentImages(images: [Photo])
 }
 
+class ImagePresenter {
+    
+    weak var delegate: ImagePresenterDelegate?
+    
+    public func setViewDelegate(delegate: ImagePresenterDelegate) {
+        self.delegate = delegate
+    }
+}
