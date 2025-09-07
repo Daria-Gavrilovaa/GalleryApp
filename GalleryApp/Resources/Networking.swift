@@ -17,3 +17,10 @@ enum Link {
         }
     }
 }
+
+final class NetworkManager: ObservableObject {
+    
+    init() {}
+    
+    static let shared = NetworkManager()
+}
