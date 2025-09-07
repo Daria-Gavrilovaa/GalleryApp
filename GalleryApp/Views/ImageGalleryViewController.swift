@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, ImagePresenterDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -27,6 +27,9 @@ class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as! MyCollectionViewCell
         return cell
+    }
+    
+    func presentImages(images: [Photo]) {
     }
 }
 
