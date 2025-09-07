@@ -15,9 +15,23 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="57" height="77"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pmF-86-anj">
+                        <rect key="frame" x="0.0" y="0.0" width="57" height="77"/>
+                    </imageView>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="pmF-86-anj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="00q-Bu-nIB"/>
+                <constraint firstItem="pmF-86-anj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1On-Ew-RQH"/>
+                <constraint firstAttribute="bottom" secondItem="pmF-86-anj" secondAttribute="bottom" id="6wb-FZ-gak"/>
+                <constraint firstAttribute="trailing" secondItem="pmF-86-anj" secondAttribute="trailing" id="WbR-7f-7bI"/>
+            </constraints>
             <size key="customSize" width="57" height="77"/>
+            <connections>
+                <outlet property="imageView" destination="pmF-86-anj" id="eEf-mi-GTk"/>
+            </connections>
             <point key="canvasLocation" x="106.10687022900763" y="29.225352112676056"/>
         </collectionViewCell>
     </objects>
