@@ -9,13 +9,20 @@
 /* Begin PBXBuildFile section */
 		040F4D612E5F20BF00438E5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F4D602E5F20BF00438E5A /* AppDelegate.swift */; };
 		040F4D632E5F20BF00438E5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F4D622E5F20BF00438E5A /* SceneDelegate.swift */; };
-		040F4D652E5F20BF00438E5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F4D642E5F20BF00438E5A /* ViewController.swift */; };
+		040F4D652E5F20BF00438E5A /* ImageGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F4D642E5F20BF00438E5A /* ImageGalleryViewController.swift */; };
 		040F4D682E5F20BF00438E5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040F4D662E5F20BF00438E5A /* Main.storyboard */; };
 		040F4D6A2E5F20C100438E5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040F4D692E5F20C100438E5A /* Assets.xcassets */; };
 		040F4D6D2E5F20C100438E5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040F4D6B2E5F20C100438E5A /* LaunchScreen.storyboard */; };
 		040F4D782E5F20C200438E5A /* GalleryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F4D772E5F20C200438E5A /* GalleryAppTests.swift */; };
 		040F4D822E5F20C200438E5A /* GalleryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F4D812E5F20C200438E5A /* GalleryAppUITests.swift */; };
 		040F4D842E5F20C200438E5A /* GalleryAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F4D832E5F20C200438E5A /* GalleryAppUITestsLaunchTests.swift */; };
+		045B297C2E6D7E7F00CFF189 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B297B2E6D7E7F00CFF189 /* Photo.swift */; };
+		045B297E2E6D7F3100CFF189 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B297D2E6D7F3100CFF189 /* Urls.swift */; };
+		045B29802E6D7F7C00CFF189 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B297F2E6D7F7C00CFF189 /* User.swift */; };
+		045B29822E6D7FA600CFF189 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B29812E6D7FA600CFF189 /* Response.swift */; };
+		045B29842E6D899C00CFF189 /* ImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B29832E6D899C00CFF189 /* ImagePresenter.swift */; };
+		045B29872E6DC2FE00CFF189 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B29852E6DC2FE00CFF189 /* MyCollectionViewCell.swift */; };
+		045B29882E6DC2FE00CFF189 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045B29862E6DC2FE00CFF189 /* MyCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +46,7 @@
 		040F4D5D2E5F20BF00438E5A /* GalleryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		040F4D602E5F20BF00438E5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		040F4D622E5F20BF00438E5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		040F4D642E5F20BF00438E5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		040F4D642E5F20BF00438E5A /* ImageGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewController.swift; sourceTree = "<group>"; };
 		040F4D672E5F20BF00438E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		040F4D692E5F20C100438E5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040F4D6C2E5F20C100438E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +56,13 @@
 		040F4D7D2E5F20C200438E5A /* GalleryAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalleryAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		040F4D812E5F20C200438E5A /* GalleryAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryAppUITests.swift; sourceTree = "<group>"; };
 		040F4D832E5F20C200438E5A /* GalleryAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		045B297B2E6D7E7F00CFF189 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		045B297D2E6D7F3100CFF189 /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		045B297F2E6D7F7C00CFF189 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		045B29812E6D7FA600CFF189 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		045B29832E6D899C00CFF189 /* ImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePresenter.swift; sourceTree = "<group>"; };
+		045B29852E6DC2FE00CFF189 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		045B29862E6DC2FE00CFF189 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +113,11 @@
 		040F4D5F2E5F20BF00438E5A /* GalleryApp */ = {
 			isa = PBXGroup;
 			children = (
+				045B297A2E6D7E1000CFF189 /* Model */,
+				045B29782E6D7DCC00CFF189 /* Views */,
+				045B29792E6D7DEF00CFF189 /* Presenter */,
 				040F4D602E5F20BF00438E5A /* AppDelegate.swift */,
 				040F4D622E5F20BF00438E5A /* SceneDelegate.swift */,
-				040F4D642E5F20BF00438E5A /* ViewController.swift */,
-				040F4D662E5F20BF00438E5A /* Main.storyboard */,
 				040F4D692E5F20C100438E5A /* Assets.xcassets */,
 				040F4D6B2E5F20C100438E5A /* LaunchScreen.storyboard */,
 				040F4D6E2E5F20C100438E5A /* Info.plist */,
@@ -127,6 +142,36 @@
 			path = GalleryAppUITests;
 			sourceTree = "<group>";
 		};
+		045B29782E6D7DCC00CFF189 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				040F4D662E5F20BF00438E5A /* Main.storyboard */,
+				040F4D642E5F20BF00438E5A /* ImageGalleryViewController.swift */,
+				045B29852E6DC2FE00CFF189 /* MyCollectionViewCell.swift */,
+				045B29862E6DC2FE00CFF189 /* MyCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		045B29792E6D7DEF00CFF189 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				045B29832E6D899C00CFF189 /* ImagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		045B297A2E6D7E1000CFF189 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				045B297B2E6D7E7F00CFF189 /* Photo.swift */,
+				045B297D2E6D7F3100CFF189 /* Urls.swift */,
+				045B297F2E6D7F7C00CFF189 /* User.swift */,
+				045B29812E6D7FA600CFF189 /* Response.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +182,7 @@
 				040F4D592E5F20BF00438E5A /* Sources */,
 				040F4D5A2E5F20BF00438E5A /* Frameworks */,
 				040F4D5B2E5F20BF00438E5A /* Resources */,
+				040F4D902E5F232100438E5A /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -233,6 +279,7 @@
 			files = (
 				040F4D6D2E5F20C100438E5A /* LaunchScreen.storyboard in Resources */,
 				040F4D6A2E5F20C100438E5A /* Assets.xcassets in Resources */,
+				045B29882E6DC2FE00CFF189 /* MyCollectionViewCell.xib in Resources */,
 				040F4D682E5F20BF00438E5A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,14 +300,41 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		040F4D902E5F232100438E5A /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/usr/local/bin\"\n\nif which swiftlint >/dev/null; then\n    echo \"Linting Swift files in project...\"\n\n    # Находим все .swift файлы\n    SWIFT_FILES=$(find \"$SRCROOT/GalleryApp\" -name \"*.swift\")\n\n    if [ -n \"$SWIFT_FILES\" ]; then\n        echo \"$SWIFT_FILES\" | xargs swiftlint lint\n    else\n        echo \"No Swift files to lint.\"\n    fi\nelse\n    echo \"error: SwiftLint does not exist\"\n    exit 1\nfi\n\n\n\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		040F4D592E5F20BF00438E5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				040F4D652E5F20BF00438E5A /* ViewController.swift in Sources */,
+				045B297C2E6D7E7F00CFF189 /* Photo.swift in Sources */,
+				040F4D652E5F20BF00438E5A /* ImageGalleryViewController.swift in Sources */,
+				045B29872E6DC2FE00CFF189 /* MyCollectionViewCell.swift in Sources */,
+				045B29842E6D899C00CFF189 /* ImagePresenter.swift in Sources */,
+				045B29802E6D7F7C00CFF189 /* User.swift in Sources */,
 				040F4D612E5F20BF00438E5A /* AppDelegate.swift in Sources */,
 				040F4D632E5F20BF00438E5A /* SceneDelegate.swift in Sources */,
+				045B297E2E6D7F3100CFF189 /* Urls.swift in Sources */,
+				045B29822E6D7FA600CFF189 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

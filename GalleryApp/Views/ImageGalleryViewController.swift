@@ -11,6 +11,7 @@ class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, 
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private let presenter = ImagePresenter()
     private var images = [Photo]()
     
     override func viewDidLoad() {
@@ -18,6 +19,7 @@ class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, 
         collectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: "MyCollectionViewCell")
         collectionView.dataSource = self
         collectionView.delegate = self
+        presenter.setViewDelegate(delegate: self)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
