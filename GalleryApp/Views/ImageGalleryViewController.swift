@@ -26,6 +26,7 @@ class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, 
         presenter.setViewDelegate(delegate: self)
         setupLayout()
         presenter.loadNextPage()
+        favoriteId = FavoritesManager.shared.loadFavorites()
     }
     
     private func setupLayout() {

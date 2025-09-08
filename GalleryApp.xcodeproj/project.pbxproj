@@ -26,6 +26,7 @@
 		045B29872E6DC2FE00CFF189 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B29852E6DC2FE00CFF189 /* MyCollectionViewCell.swift */; };
 		045B29882E6DC2FE00CFF189 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045B29862E6DC2FE00CFF189 /* MyCollectionViewCell.xib */; };
 		045B298B2E6E0DB200CFF189 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B298A2E6E0DB200CFF189 /* Networking.swift */; };
+		046B05372E6F0E70002710E2 /* SaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B05362E6F0E70002710E2 /* SaveManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		045B29852E6DC2FE00CFF189 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		045B29862E6DC2FE00CFF189 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		045B298A2E6E0DB200CFF189 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		046B05362E6F0E70002710E2 /* SaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 			children = (
 				045B298A2E6E0DB200CFF189 /* Networking.swift */,
 				045933212E6EA44300A522FC /* ImageExtension.swift */,
+				046B05362E6F0E70002710E2 /* SaveManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				045B298B2E6E0DB200CFF189 /* Networking.swift in Sources */,
 				040F4D652E5F20BF00438E5A /* ImageGalleryViewController.swift in Sources */,
 				045B29872E6DC2FE00CFF189 /* MyCollectionViewCell.swift in Sources */,
+				046B05372E6F0E70002710E2 /* SaveManager.swift in Sources */,
 				045B29842E6D899C00CFF189 /* ImagePresenter.swift in Sources */,
 				045B29802E6D7F7C00CFF189 /* User.swift in Sources */,
 				045933222E6EA44300A522FC /* ImageExtension.swift in Sources */,
