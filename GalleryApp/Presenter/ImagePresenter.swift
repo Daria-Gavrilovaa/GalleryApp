@@ -33,9 +33,15 @@ class ImagePresenter {
     }
     
     private func getImage(page: Int) {
-        NetworkManager.shared.fetchPhoto(page: page, limit: limit) { images in
-            self.delegate?.presentImages(images: images)
-            self.isPageRefreshing = false
+        NetworkManager.shared.fetchPhoto(page: page, limit: limit) { result in
+        switch result {
+            case .success(let decodedImages):
+                self.delegate?.presentImages(images: decodedImages)
+                self.isPageRefreshing = false
+                
+            case .failure(let networkError):
+                print("\(networkError)")
+            }
         }
     }
 }

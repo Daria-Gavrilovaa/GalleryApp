@@ -18,6 +18,11 @@ enum Link {
     }
 }
 
+enum NetworkError: Error {
+    case noData
+    case decodingError
+}
+
 final class NetworkManager: ObservableObject {
     
     init() {}
@@ -27,25 +32,27 @@ final class NetworkManager: ObservableObject {
     var images = [Photo]()
     private var token = "ttjV4npqziwmjqehd1Ibx3KVUgFWCA7eNxotJwfTOwQ"
     
-    func fetchPhoto(page: Int = 1, limit: Int = 30, completion: @escaping ([Photo]) -> ()) {
+    func fetchPhoto(page: Int = 1, limit: Int = 30, completion: @escaping (Result<[Photo], NetworkError>) -> ()) {
         var request = URLRequest(url: Link.images(page: page, limit: limit).url)
         
         request.httpMethod = "GET"
         request.setValue("Client-ID \(token)", forHTTPHeaderField: "Authorization")
         
         let task = URLSession.shared.dataTask(with: request) {data, response, error in
-            guard let data = data, error == nil else { return }
+            guard let data = data, error == nil else {
+                completion(.failure(.noData))
+                return
+            }
             
             let httpsResponse = response as? HTTPURLResponse
             print("Status code: \(String(describing: httpsResponse?.statusCode))")
             
             do {
                 let images = try JSONDecoder().decode([Photo].self, from: data)
-                DispatchQueue.main.async {
-                    completion(images)
-                }
-            } catch {
-                print(error)
+                completion(.success(images))
+            } catch let decodeError {
+                print("Decoding error: \(decodeError.localizedDescription)")
+                completion(.failure(.decodingError))
             }
         }
         task.resume()
