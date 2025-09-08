@@ -13,6 +13,7 @@ class ImageDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var desctiptionText: UILabel!
     @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var heartButton: UIButton!
     weak var galleryVC: ImageGalleryViewController?
     
     var selectedImageIndex = 0
