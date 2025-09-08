@@ -38,4 +38,20 @@ class ImageDetailViewController: UIViewController {
             self.username.text = "Username:\(title)"
         }
     }
+    
+    
+    @IBAction func leftSwipeGesture(_ sender: UISwipeGestureRecognizer) {
+        if selectedImageIndex + 1 < images.count {
+            selectedImageIndex += 1
+            showInfo()
+        }
+    }
+    
+    @IBAction func rightSwipeGesture(_ sender: UISwipeGestureRecognizer) {
+        if selectedImageIndex - 1 >= 0 {
+            selectedImageIndex -= 1
+            showInfo()
+        }
+    }
+    
 }
