@@ -16,6 +16,8 @@ class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Photos"
+        navigationController?.navigationBar.prefersLargeTitles = true
         collectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: "MyCollectionViewCell")
         collectionView.dataSource = self
         collectionView.delegate = self
