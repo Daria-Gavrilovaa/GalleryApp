@@ -30,17 +30,22 @@ class ImageDetailViewController: UIViewController {
         
         guard let url = URL(string: selectedImage.urls.full) else { return }
         
-        imageView.loadImageUsingCache(url: url) { [weak self] in
+        imageView.loadImageUsingCache(url: url) { [weak self] result in
             guard let self = self else { return }
             
-            let title = selectedImage.user.username ?? ""
-            let description = selectedImage.description ?? ""
-            self.desctiptionText.text = "\(description)"
-            self.username.text = "Username:\(title)"
-            if let galleryVC = self.galleryVC {
-                let isFav = galleryVC.favoriteId.contains(selectedImage.id)
-                let imageName = isFav ? "heart.fill" : "heart"
-                self.heartButton.setImage(UIImage(systemName: imageName), for: .normal)
+            switch result {
+            case .success:
+                let title = selectedImage.user.username ?? ""
+                let description = selectedImage.description ?? ""
+                self.desctiptionText.text = "\(description)"
+                self.username.text = "Username:\(title)"
+                if let galleryVC = self.galleryVC {
+                    let isFav = galleryVC.favoriteId.contains(selectedImage.id)
+                    let imageName = isFav ? "heart.fill" : "heart"
+                    self.heartButton.setImage(UIImage(systemName: imageName), for: .normal)
+                }
+            case .failure(let error):
+                print("Ошибка загрузки картинки: \(error)")
             }
         }
     }

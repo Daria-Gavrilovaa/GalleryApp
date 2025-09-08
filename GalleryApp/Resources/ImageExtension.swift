@@ -7,22 +7,39 @@
 
 import UIKit
 
+enum ImageError: Error {
+    case invalidStatus
+    case noData
+    case tooManyRequests
+}
+
 extension UIImageView {
     private static let imageCache = NSCache<NSURL, UIImage>()
 
-    func loadImageUsingCache(url: URL, completion: (() -> Void)? = nil) {
+    func loadImageUsingCache(url: URL, completion: @escaping (Result<UIImage, ImageError>) -> Void) {
         if let cachedImage = UIImageView.imageCache.object(forKey: url as NSURL) {
             self.image = cachedImage
-            completion?()
+            completion(.success(cachedImage))
             return
         }
 
-        URLSession.shared.dataTask(with: url) { data, _, _ in
-            guard let data = data, let image = UIImage(data: data) else { return }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, let image = UIImage(data: data) else {
+                completion(.failure(.noData))
+                return
+            }
+            
+            let httpsResponse = response as? HTTPURLResponse
+            print("Status code: \(String(describing: httpsResponse?.statusCode))")
+            
+            if httpsResponse?.statusCode == 429 {
+                completion(.failure(.tooManyRequests))
+            }
+                
             UIImageView.imageCache.setObject(image, forKey: url as NSURL)
             DispatchQueue.main.async {
                 self.image = image
-                completion?() 
+                completion(.success(image))
             }
         }.resume()
     }

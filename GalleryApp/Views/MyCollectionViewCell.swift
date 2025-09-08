@@ -27,7 +27,14 @@ class MyCollectionViewCell: UICollectionViewCell {
     
     public func configure(with urlString: String, favoriteImage: Bool) {
         guard let url = URL(string: urlString) else { return }
-        imageView.loadImageUsingCache(url: url)
+        imageView.loadImageUsingCache(url: url) { result in
+            switch result {
+            case .success(_):
+                print("Загружено")
+            case .failure(let error):
+                print("Ошибка загрузки: \(error)")
+            }
+        }
         heartImage.isHidden = !favoriteImage
         heartImage.image = UIImage(systemName: "heart.fill")
     }
