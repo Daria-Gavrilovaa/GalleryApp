@@ -13,15 +13,18 @@ protocol ImagePresenterDelegate: AnyObject {
 
 class ImagePresenter {
     
+    private let limit = 30
+    private var page = 0
+    
     weak var delegate: ImagePresenterDelegate?
     
     public func setViewDelegate(delegate: ImagePresenterDelegate) {
         self.delegate = delegate
     }
     
-    private func getImage() {
+    private func getImage(page: Int) {
         NetworkManager.shared.fetchPhoto { images in
-            <#code#>
+            self.delegate?.presentImages(images: images)
         }
     }
 }

@@ -29,11 +29,13 @@ class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as! MyCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as? MyCollectionViewCell else {
+            fatalError("Could not dequeue MyCollectionViewCell")
+        }
+        let image = images[indexPath.row]
         return cell
     }
     
     func presentImages(images: [Photo]) {
     }
 }
-
