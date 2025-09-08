@@ -33,6 +33,7 @@ class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, 
             fatalError("Could not dequeue MyCollectionViewCell")
         }
         let image = images[indexPath.row]
+        cell.configure(with: images[indexPath.row].urls.small)
         return cell
     }
     
