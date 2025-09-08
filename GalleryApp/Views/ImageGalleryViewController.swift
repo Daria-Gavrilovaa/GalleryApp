@@ -23,7 +23,20 @@ class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, 
         collectionView.dataSource = self
         collectionView.delegate = self
         presenter.setViewDelegate(delegate: self)
+        setupLayout()
         presenter.loadNextPage()
+    }
+    
+    private func setupLayout() {
+        guard let flow = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {return}
+        let itemSpacing: CGFloat = 2
+        let itemsInOneLine: CGFloat = 3
+        flow.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+
+        let width = UIScreen.main.bounds.size.width - itemSpacing * CGFloat(itemsInOneLine - 1)
+        flow.itemSize = CGSize(width: floor(width/itemsInOneLine), height: width/itemsInOneLine)
+        flow.minimumInteritemSpacing = 3
+        flow.minimumLineSpacing = itemSpacing
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
