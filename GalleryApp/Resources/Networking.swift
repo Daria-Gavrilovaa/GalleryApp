@@ -20,6 +20,7 @@ enum Link {
 
 enum NetworkError: Error {
     case noData
+    case tooManyRequests
     case decodingError
 }
 
@@ -47,12 +48,16 @@ final class NetworkManager: ObservableObject {
             let httpsResponse = response as? HTTPURLResponse
             print("Status code: \(String(describing: httpsResponse?.statusCode))")
             
-            do {
-                let images = try JSONDecoder().decode([Photo].self, from: data)
-                completion(.success(images))
-            } catch let decodeError {
-                print("Decoding error: \(decodeError.localizedDescription)")
-                completion(.failure(.decodingError))
+            if httpsResponse?.statusCode == 429 {
+                completion(.failure(.tooManyRequests))
+            } else {
+                do {
+                    let images = try JSONDecoder().decode([Photo].self, from: data)
+                    completion(.success(images))
+                } catch let decodeError {
+                    print("Decoding error: \(decodeError.localizedDescription)")
+                    completion(.failure(.decodingError))
+                }
             }
         }
         task.resume()
