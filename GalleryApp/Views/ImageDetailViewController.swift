@@ -9,7 +9,6 @@ import UIKit
 
 class ImageDetailViewController: UIViewController {
 
-    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var desctiptionText: UILabel!
     @IBOutlet weak var username: UILabel!
@@ -49,7 +48,6 @@ class ImageDetailViewController: UIViewController {
             }
         }
     }
-    
     
     @IBAction func leftSwipeGesture(_ sender: UISwipeGestureRecognizer) {
         if selectedImageIndex + 1 < images.count {

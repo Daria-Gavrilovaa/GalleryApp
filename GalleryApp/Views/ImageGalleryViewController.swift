@@ -78,13 +78,11 @@ class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, 
         print("Получено \(images.count) изображений")
         var indexPaths: [IndexPath] = []
         
-        for image in images {
-            if !usedId.contains(image.id) {
+        for image in images where !usedId.contains(image.id) {
                 usedId.append(image.id)
                 let index = self.images.count
                 self.images.append(image)
                 indexPaths.append(IndexPath(item: index, section: 0))
-            }
         }
         
         DispatchQueue.main.async {

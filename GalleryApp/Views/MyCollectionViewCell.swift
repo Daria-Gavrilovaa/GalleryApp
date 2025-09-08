@@ -29,7 +29,7 @@ class MyCollectionViewCell: UICollectionViewCell {
         guard let url = URL(string: urlString) else { return }
         imageView.loadImageUsingCache(url: url) { result in
             switch result {
-            case .success(_):
+            case .success:
                 print("Загружено")
             case .failure(let error):
                 print("Ошибка загрузки: \(error)")

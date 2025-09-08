@@ -33,7 +33,7 @@ final class NetworkManager: ObservableObject {
     var images = [Photo]()
     private var token = "ttjV4npqziwmjqehd1Ibx3KVUgFWCA7eNxotJwfTOwQ"
     
-    func fetchPhoto(page: Int = 1, limit: Int = 30, completion: @escaping (Result<[Photo], NetworkError>) -> ()) {
+    func fetchPhoto(page: Int = 1, limit: Int = 30, completion: @escaping (Result<[Photo], NetworkError>) -> Void) {
         var request = URLRequest(url: Link.images(page: page, limit: limit).url)
         
         request.httpMethod = "GET"
@@ -58,6 +58,7 @@ final class NetworkManager: ObservableObject {
                     print("Decoding error: \(decodeError.localizedDescription)")
                     completion(.failure(.decodingError))
                 }
+
             }
         }
         task.resume()
