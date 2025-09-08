@@ -39,6 +39,7 @@
             </constraints>
             <size key="customSize" width="57" height="77"/>
             <connections>
+                <outlet property="heartImage" destination="wmB-pT-ghj" id="SQu-ai-Tx7"/>
                 <outlet property="imageView" destination="pmF-86-anj" id="eEf-mi-GTk"/>
             </connections>
             <point key="canvasLocation" x="106.10687022900763" y="29.225352112676056"/>
