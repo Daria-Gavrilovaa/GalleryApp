@@ -52,6 +52,15 @@ class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, 
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "ImageInfo") as? ImageDetailViewController {
+            vc.selectedImageIndex = indexPath.row
+            vc.images = images
+            vc.galleryVC = self
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let position = scrollView.contentOffset.y
         let contentHeight = collectionView.contentSize.height
