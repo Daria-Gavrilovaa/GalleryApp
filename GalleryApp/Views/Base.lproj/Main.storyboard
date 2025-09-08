@@ -57,6 +57,55 @@
             </objects>
             <point key="canvasLocation" x="3385.4961832061067" y="23.943661971830988"/>
         </scene>
+        <!--Image Detail View Controller-->
+        <scene sceneID="Lnq-IQ-7fP">
+            <objects>
+                <viewController id="ITd-9z-WJQ" customClass="ImageDetailViewController" customModule="GalleryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FIA-rd-Yqo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5M6-Lp-Wax">
+                                <rect key="frame" x="5" y="239" width="383" height="450"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AII-MA-zSc">
+                                <rect key="frame" x="0.0" y="183" width="383" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vd-F3-nK6">
+                                <rect key="frame" x="80" y="79" width="293" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wZT-0u-i9F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wZT-0u-i9F" firstAttribute="trailing" secondItem="4Vd-F3-nK6" secondAttribute="trailing" constant="20" id="25y-ay-4Bh"/>
+                            <constraint firstItem="wZT-0u-i9F" firstAttribute="bottom" secondItem="5M6-Lp-Wax" secondAttribute="bottom" constant="129" id="8J6-Hy-YCl"/>
+                            <constraint firstItem="wZT-0u-i9F" firstAttribute="trailing" secondItem="AII-MA-zSc" secondAttribute="trailing" constant="10" id="8R9-EZ-Ys1"/>
+                            <constraint firstItem="5M6-Lp-Wax" firstAttribute="leading" secondItem="wZT-0u-i9F" secondAttribute="leading" constant="5" id="A7i-WP-3B5"/>
+                            <constraint firstItem="4Vd-F3-nK6" firstAttribute="leading" secondItem="wZT-0u-i9F" secondAttribute="leading" constant="80" id="LLM-1y-fha"/>
+                            <constraint firstItem="5M6-Lp-Wax" firstAttribute="top" secondItem="wZT-0u-i9F" secondAttribute="top" constant="180" id="Ob5-Kg-Oba"/>
+                            <constraint firstItem="AII-MA-zSc" firstAttribute="leading" secondItem="wZT-0u-i9F" secondAttribute="leading" id="U1f-5X-hVr"/>
+                            <constraint firstItem="4Vd-F3-nK6" firstAttribute="top" secondItem="wZT-0u-i9F" secondAttribute="top" constant="20" id="beE-DX-5aE"/>
+                            <constraint firstItem="wZT-0u-i9F" firstAttribute="trailing" secondItem="5M6-Lp-Wax" secondAttribute="trailing" constant="5" id="f2O-ns-71u"/>
+                            <constraint firstItem="5M6-Lp-Wax" firstAttribute="top" secondItem="AII-MA-zSc" secondAttribute="bottom" constant="20" id="voY-6g-dmq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="desctiptionText" destination="AII-MA-zSc" id="c5V-8e-Axq"/>
+                        <outlet property="imageView" destination="5M6-Lp-Wax" id="TLS-tg-6cf"/>
+                        <outlet property="username" destination="4Vd-F3-nK6" id="bxD-7a-qHj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ru-v2-8X2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4183.9694656488546" y="23.943661971830988"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="rGB-8L-Ul0">
             <objects>

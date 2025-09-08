@@ -17,6 +17,7 @@
 		040F4D822E5F20C200438E5A /* GalleryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F4D812E5F20C200438E5A /* GalleryAppUITests.swift */; };
 		040F4D842E5F20C200438E5A /* GalleryAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F4D832E5F20C200438E5A /* GalleryAppUITestsLaunchTests.swift */; };
 		045933222E6EA44300A522FC /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045933212E6EA44300A522FC /* ImageExtension.swift */; };
+		045A81E62E6EC96C00D3755D /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A81E52E6EC96C00D3755D /* ImageDetailViewController.swift */; };
 		045B297C2E6D7E7F00CFF189 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B297B2E6D7E7F00CFF189 /* Photo.swift */; };
 		045B297E2E6D7F3100CFF189 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B297D2E6D7F3100CFF189 /* Urls.swift */; };
 		045B29802E6D7F7C00CFF189 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B297F2E6D7F7C00CFF189 /* User.swift */; };
@@ -59,6 +60,7 @@
 		040F4D812E5F20C200438E5A /* GalleryAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryAppUITests.swift; sourceTree = "<group>"; };
 		040F4D832E5F20C200438E5A /* GalleryAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		045933212E6EA44300A522FC /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		045A81E52E6EC96C00D3755D /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
 		045B297B2E6D7E7F00CFF189 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		045B297D2E6D7F3100CFF189 /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		045B297F2E6D7F7C00CFF189 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				040F4D642E5F20BF00438E5A /* ImageGalleryViewController.swift */,
 				045B29852E6DC2FE00CFF189 /* MyCollectionViewCell.swift */,
 				045B29862E6DC2FE00CFF189 /* MyCollectionViewCell.xib */,
+				045A81E52E6EC96C00D3755D /* ImageDetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				045B29842E6D899C00CFF189 /* ImagePresenter.swift in Sources */,
 				045B29802E6D7F7C00CFF189 /* User.swift in Sources */,
 				045933222E6EA44300A522FC /* ImageExtension.swift in Sources */,
+				045A81E62E6EC96C00D3755D /* ImageDetailViewController.swift in Sources */,
 				040F4D612E5F20BF00438E5A /* AppDelegate.swift in Sources */,
 				040F4D632E5F20BF00438E5A /* SceneDelegate.swift in Sources */,
 				045B297E2E6D7F3100CFF189 /* Urls.swift in Sources */,
