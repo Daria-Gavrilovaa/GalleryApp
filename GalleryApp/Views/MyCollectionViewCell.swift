@@ -15,6 +15,11 @@ class MyCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView.image = nil
+    }
+    
     static func nib() -> UINib {
         return UINib(nibName: "MyCollectionViewCell", bundle: nil)
     }
