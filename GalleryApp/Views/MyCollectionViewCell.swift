@@ -22,7 +22,7 @@ class MyCollectionViewCell: UICollectionViewCell {
         imageView.image = nil
     }
     
-    public func configure(with urlString: String) {
+    public func configure(with urlString: String, favoriteImage: Bool) {
         guard let url = URL(string: urlString) else { return }
         imageView.loadImageUsingCache(url: url)
 

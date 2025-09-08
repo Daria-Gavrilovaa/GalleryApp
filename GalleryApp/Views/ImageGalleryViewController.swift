@@ -14,6 +14,7 @@ class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, 
     private let presenter = ImagePresenter()
     private var images = [Photo]()
     private var usedId = [String]()
+    public var favoriteId = Set<String>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,8 @@ class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, 
             fatalError("Could not dequeue MyCollectionViewCell")
         }
         let image = images[indexPath.row]
-        cell.configure(with: images[indexPath.row].urls.small)
+        let favoriteImage = favoriteId.contains(image.id)
+        cell.configure(with: images[indexPath.row].urls.small, favoriteImage: favoriteImage)
         return cell
     }
     

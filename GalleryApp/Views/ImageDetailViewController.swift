@@ -37,6 +37,11 @@ class ImageDetailViewController: UIViewController {
             let description = selectedImage.description ?? ""
             self.desctiptionText.text = "\(description)"
             self.username.text = "Username:\(title)"
+            if let galleryVC = self.galleryVC {
+                let isFav = galleryVC.favoriteId.contains(selectedImage.id)
+                let imageName = isFav ? "heart.fill" : "heart"
+                self.heartButton.setImage(UIImage(systemName: imageName), for: .normal)
+            }
         }
     }
     
@@ -55,4 +60,25 @@ class ImageDetailViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func addFavorite(_ sender: UIButton) {
+        if selectedImageIndex >= 0 && selectedImageIndex < images.count {
+            let selectedImage = images[selectedImageIndex]
+            guard let galleryVC else {return}
+            
+            if galleryVC.favoriteId.contains(selectedImage.id)  {
+                galleryVC.favoriteId.remove(selectedImage.id)
+                heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
+            } else {
+                galleryVC.favoriteId.insert(selectedImage.id)
+                heartButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            }
+            
+            FavoritesManager.shared.saveFavorites(galleryVC.favoriteId)
+            
+            showInfo()
+            let indexPath = IndexPath(item: selectedImageIndex, section: 0)
+            galleryVC.collectionView.reloadItems(at: [indexPath])
+        }
+    }
 }
