@@ -60,13 +60,12 @@ class ImageDetailViewController: UIViewController {
         }
     }
     
-    
     @IBAction func addFavorite(_ sender: UIButton) {
         if selectedImageIndex >= 0 && selectedImageIndex < images.count {
             let selectedImage = images[selectedImageIndex]
             guard let galleryVC else {return}
             
-            if galleryVC.favoriteId.contains(selectedImage.id)  {
+            if galleryVC.favoriteId.contains(selectedImage.id) {
                 galleryVC.favoriteId.remove(selectedImage.id)
                 heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
             } else {
