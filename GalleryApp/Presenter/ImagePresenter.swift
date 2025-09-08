@@ -41,7 +41,7 @@ class ImagePresenter {
                 
             case .failure(let networkError):
                 print("\(networkError)")
-                
+                self.isPageRefreshing = false
             }
         }
     }
