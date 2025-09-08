@@ -20,6 +20,12 @@ class MyCollectionViewCell: UICollectionViewCell {
         imageView.image = nil
     }
     
+    public func configure(with urlString: String) {
+        guard let url = URL(string: urlString) else { return }
+        imageView.loadImageUsingCache(url: url)
+
+    }
+    
     static func nib() -> UINib {
         return UINib(nibName: "MyCollectionViewCell", bundle: nil)
     }
