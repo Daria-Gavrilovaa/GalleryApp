@@ -13,6 +13,8 @@ class MyCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
     }
 
     override func prepareForReuse() {
