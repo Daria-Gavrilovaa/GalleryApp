@@ -18,4 +18,10 @@ class ImagePresenter {
     public func setViewDelegate(delegate: ImagePresenterDelegate) {
         self.delegate = delegate
     }
+    
+    private func getImage() {
+        NetworkManager.shared.fetchPhoto { images in
+            <#code#>
+        }
+    }
 }
