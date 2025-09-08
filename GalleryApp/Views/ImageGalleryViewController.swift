@@ -23,6 +23,7 @@ class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, 
         collectionView.dataSource = self
         collectionView.delegate = self
         presenter.setViewDelegate(delegate: self)
+        presenter.loadNextPage()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -36,6 +37,16 @@ class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, 
         let image = images[indexPath.row]
         cell.configure(with: images[indexPath.row].urls.small)
         return cell
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let position = scrollView.contentOffset.y
+        let contentHeight = collectionView.contentSize.height
+        let scrollHeight = scrollView.frame.size.height
+
+        if position > contentHeight - scrollHeight * 2 {
+            presenter.loadNextPage()
+        }
     }
     
     func presentImages(images: [Photo]) {
