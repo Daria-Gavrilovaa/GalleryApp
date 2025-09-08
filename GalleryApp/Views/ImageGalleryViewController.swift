@@ -13,6 +13,7 @@ class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, 
     
     private let presenter = ImagePresenter()
     private var images = [Photo]()
+    private var usedId = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,5 +39,22 @@ class ImageGalleryViewController: UIViewController, UICollectionViewDataSource, 
     }
     
     func presentImages(images: [Photo]) {
+        print("Получено \(images.count) изображений")
+        var indexPaths: [IndexPath] = []
+        
+        for image in images {
+            if !usedId.contains(image.id) {
+                usedId.append(image.id)
+                let index = self.images.count
+                self.images.append(image)
+                indexPaths.append(IndexPath(item: index, section: 0))
+            }
+        }
+        
+        DispatchQueue.main.async {
+            self.collectionView.performBatchUpdates({
+                self.collectionView.insertItems(at: indexPaths)
+            }, completion: nil)
+        }
     }
 }
