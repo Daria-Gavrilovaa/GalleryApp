@@ -44,8 +44,7 @@ final class NetworkManager: ObservableObject {
                 DispatchQueue.main.async {
                     completion(images)
                 }
-            }
-            catch {
+            } catch {
                 print(error)
             }
         }

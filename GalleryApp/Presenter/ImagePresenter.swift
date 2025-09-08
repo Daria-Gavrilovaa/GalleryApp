@@ -33,7 +33,7 @@ class ImagePresenter {
     }
     
     private func getImage(page: Int) {
-        NetworkManager.shared.fetchPhoto { images in
+        NetworkManager.shared.fetchPhoto(page: page, limit: limit) { images in
             self.delegate?.presentImages(images: images)
             self.isPageRefreshing = false
         }
