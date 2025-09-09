@@ -26,6 +26,7 @@
 		045B29872E6DC2FE00CFF189 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B29852E6DC2FE00CFF189 /* MyCollectionViewCell.swift */; };
 		045B29882E6DC2FE00CFF189 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045B29862E6DC2FE00CFF189 /* MyCollectionViewCell.xib */; };
 		045B298B2E6E0DB200CFF189 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B298A2E6E0DB200CFF189 /* Networking.swift */; };
+		046893352E6F5F5600C617D0 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 046893342E6F5F5600C617D0 /* test.jpg */; };
 		046B05372E6F0E70002710E2 /* SaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B05362E6F0E70002710E2 /* SaveManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		045B29852E6DC2FE00CFF189 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		045B29862E6DC2FE00CFF189 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		045B298A2E6E0DB200CFF189 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		046893342E6F5F5600C617D0 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 		046B05362E6F0E70002710E2 /* SaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +139,7 @@
 		040F4D762E5F20C200438E5A /* GalleryAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				046893342E6F5F5600C617D0 /* test.jpg */,
 				040F4D772E5F20C200438E5A /* GalleryAppTests.swift */,
 			);
 			path = GalleryAppTests;
@@ -308,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046893352E6F5F5600C617D0 /* test.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,9 +331,12 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"$(SRCROOT)/Networking.xcfilelist",
+				"",
+				"",
+				"",
 			);
 			inputPaths = (
+				"$(SRCROOT)/newInputFile",
 			);
 			name = "Run Script";
 			outputFileListPaths = (
