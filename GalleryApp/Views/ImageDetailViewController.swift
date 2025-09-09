@@ -21,6 +21,7 @@ class ImageDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         showInfo()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareImage))
     }
     
     func showInfo() {
@@ -82,5 +83,18 @@ class ImageDetailViewController: UIViewController {
             let indexPath = IndexPath(item: selectedImageIndex, section: 0)
             galleryVC.collectionView.reloadItems(at: [indexPath])
         }
+    }
+    
+    @objc func shareImage() {
+        guard let image = imageView.image?.jpegData(compressionQuality: 0.8) else {
+            print("Image is not found")
+                return
+            }
+        let selectedImage = images[selectedImageIndex]
+        let username = selectedImage.user.username ?? ""
+    
+        let vc = UIActivityViewController(activityItems: [username, image], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
     }
 }
